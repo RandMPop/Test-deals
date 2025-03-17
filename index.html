@@ -6,14 +6,16 @@
     </head>
     <body>
         <script>
-            fetch('https://github.com/RandMPop/Test-deals/tree/main/result', {
+            fetch('https://cors-anywhere.herokuapp.com/https://olgachfrontend.amocrm.ru/oauth2/access_token', {
                 method: 'POST',
-                headers: {'Content-Type': 'application/json'},
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Origin': 'https://olgachfrontend.amocrm.ru',},
                 body: JSON.stringify({
                     client_id: "36580453-1c14-4459-898e-0c7c339039eb",
-                    client_secret: "f6Umn3SfNO0XVKWiKF4D7CIYbZ8wiqFZtf9y9JcNl1lkUJPrt1wTlaYChfWiiJW3",
+                    client_secret: "Iu5Ql1MOnEbpSnm4MjR7uOG564EUDzm3mhrCaH9lGaePQQ7AOG3KJ1LQw5nVcRXP",
                     grant_type: "authorization_code",
-                    code: "def502008632a911509bcdd84df1cabd359b3cfc441ccffa57009ac9693535b4145b94fce814efa73a0214e5102d472da449db088289265ce7c38a9b1945fe0a7065704a5952722a45a1a9dec65346970846a2c5b1590c129ac2e4c1d98514cc0cd335f0871c34463e8679cd3aefc9cbdb6ab9cfe2e867e1ef8b6ea2dea9321be23104e947c13f3317d1ea51673b8dea1646e110f4a67df2234366bf8342b0f642eb2175daf29bbde644c69d6d9b5b74340dcbe6cbfcd0399e0a04d02c9b34df3cc80a72fac952aaf6c1624d5fe3361e05da3d149ab7ce6820198d0cb07c23e04c78a19b6821425fcbfb6cfc1a1ec0700111c83c77cf98fadd11370c8095106c58a7344f4a82ec303677b2e82e41e63b3d52f2903bb3dc7d8ec99a8cef71d5a89358d7dda8c5f26959cba535f6e6c1f04117caac0c2a2f225e2bd7e76d25e1cf90b6c8d491b2dc79845ea28ce4f7d59640300de2e91280e0130c57a546e9f8f10427fb788b89976872982b935b5786d2aa7e5dda907e80bbae054f83990e44fc3d185a99167549e30d16c83d8ca08df5162c6a7fe2a396c5cae2018f1ebb7659e45e535d8c3839eb8e219b095063b85762e8460328ddf898f2556d62f8b306961dc4cf937bc7be11f687a314608a8c1f3b09e4e42be80d893ec2a7adaead22ca30f84ef60213f8880d21609f7bb6be245dbe2080ea9695ae76",
+                    code: "def50200a4cf96c2f11bc76cb90b07ffec36938715a7234854c7c1d4ea05dd1b3bdf2c4a3c77b784c9144ecda3316dd32732c79ba8727bca4397fe51c1fbd30b5cba35fb5da0ba2d61db3db57f0d71c007c55b9d4fa2ce4524c2cd8a55127021f859a8bac7f567f7262f1eae38a28ffa3ef890c5fbd7c4c6e2bce4c565a116b94f79ef429fb2fb1e7254c5051cb16e8799ceced9ec9474b94d426b21d8e774845ee38d036193c7698ebc2bb4c1cc1c998813ff5620c21a3521113b487cd7692869553f48a690aeb8e4172bb2e200dbcc8adeb47447faeac099952a40ee33c71e8e85b4fbe6491fbdd529ac176ae93b306297d47b8b0d7f46d3a8b9dd8451a1592b015dd3a87e5366941fe12152223176ae84eb9f8437b05ecfe3ee2717d4c07238b83155d58c6fa781ce8331c16692d3a2dda7993fbfd3c7019f74d5c6abd6114dd0676ea3256f50accd74524d046c758c182e36878819be50017d15118ff51d8390b7bf93eedb8b50fb37d7338b95226fb88c28ffd1e3b1143eb267b614501492d9fd2c6be89725ea86bdf3c5dce381d4ec11f8e170cc91a6801ec62451dda61d9bcf71bdcca32cd48fd48be93278f95d3dbaa720852a33563928f4840b060ae3b95ead547f382d7d92eb92af895e2584d7170a83f77c8dc914e16c93d80672657f92b25463098616fd6e74da5b4dbf26e1f5e77828282847",
                     redirect_uri: "https://randmpop.github.io/Test-deals/"
                 })
             })
