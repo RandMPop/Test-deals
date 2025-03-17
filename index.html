@@ -6,24 +6,20 @@
     </head>
     <body>
         <script>
-             fetch("https://jsonplaceholder.typicode.com/todos",
-            {
-                method: "POST",
-                body: JSON
-                .stringify
-                ({
-                "client_id": "xxxx",
-                "client_secret": "xxxx",
-                "grant_type": "authorization_code",
-                "code": "xxxxxxx",
-                "redirect_uri": "https://test.test"
-                }),
-                headers: {
-                "Content-type": "application/json",
-                },
+            fetch('https://github.com/RandMPop/Test-deals/tree/main/result', {
+                method: 'POST',
+                headers: {'Content-Type': 'application/json'},
+                body: JSON.stringify({
+                    client_id: "36580453-1c14-4459-898e-0c7c339039eb",
+                    client_secret: "f6Umn3SfNO0XVKWiKF4D7CIYbZ8wiqFZtf9y9JcNl1lkUJPrt1wTlaYChfWiiJW3",
+                    grant_type: "authorization_code",
+                    code: "def502008632a911509bcdd84df1cabd359b3cfc441ccffa57009ac9693535b4145b94fce814efa73a0214e5102d472da449db088289265ce7c38a9b1945fe0a7065704a5952722a45a1a9dec65346970846a2c5b1590c129ac2e4c1d98514cc0cd335f0871c34463e8679cd3aefc9cbdb6ab9cfe2e867e1ef8b6ea2dea9321be23104e947c13f3317d1ea51673b8dea1646e110f4a67df2234366bf8342b0f642eb2175daf29bbde644c69d6d9b5b74340dcbe6cbfcd0399e0a04d02c9b34df3cc80a72fac952aaf6c1624d5fe3361e05da3d149ab7ce6820198d0cb07c23e04c78a19b6821425fcbfb6cfc1a1ec0700111c83c77cf98fadd11370c8095106c58a7344f4a82ec303677b2e82e41e63b3d52f2903bb3dc7d8ec99a8cef71d5a89358d7dda8c5f26959cba535f6e6c1f04117caac0c2a2f225e2bd7e76d25e1cf90b6c8d491b2dc79845ea28ce4f7d59640300de2e91280e0130c57a546e9f8f10427fb788b89976872982b935b5786d2aa7e5dda907e80bbae054f83990e44fc3d185a99167549e30d16c83d8ca08df5162c6a7fe2a396c5cae2018f1ebb7659e45e535d8c3839eb8e219b095063b85762e8460328ddf898f2556d62f8b306961dc4cf937bc7be11f687a314608a8c1f3b09e4e42be80d893ec2a7adaead22ca30f84ef60213f8880d21609f7bb6be245dbe2080ea9695ae76",
+                    redirect_uri: "https://randmpop.github.io/Test-deals/"
+                })
             })
-                .then((response) => response.json())
-                .then((json) => console.log(json));
+            .then(res => res.json())
+            .then(data => console.log('Успешно:', data))
+            .catch(error => console.error('Ошибка:', error));
         </script>
     </body>
 </html>
