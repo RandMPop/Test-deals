@@ -3,6 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <link rel="stylesheet"  href="styles.css">
     </head>
     <body>
         <script>
@@ -16,7 +17,7 @@
             //         client_id: "36580453-1c14-4459-898e-0c7c339039eb",
             //         client_secret: "iH4Sqdyl5hT3MwK6uxH03ikQ1qMJbPP7M7yilGlozVo1it0T17Fw2VFAunZTkzyw",
             //         grant_type: "authorization_code",
-            //         code: "def502002f06d41805a43143659a4b9bd29139fb46fdd76cdffc53ce95cd75af7862b93678b87ac4ac9361d318bcb89aa242d91c53689ee5d795c47a65ec00da5da2e84161e331cb0922f57a2a0961af2a7007b78fc83233b8c6a52561706a6c99a74002720d1d46b6168b9e2f5bd75399623d450c4ce76ee8af0fb3c4d9a2ea4a5289245344d2e1218d7fefdf36ec734588e96e66484b22748caec652772172b63789616dd517517ad89157f01e5622aa67d31625bb664504a99838846d7eae89b6ce7f05e90370bd665f353b1904369d37d34550a8ae946a08c814e77f28eef3aceb6765d26ec9c3a04edc5cc3374c60d712a9cf96f8bb3acef04a9e5dab36571726f57862e98b980114ce8024cca15ecb342928bded79b8dd8af1770d51eec51db6a9cfbec039eb8e1c5b55f7319f874703d2742d2875d2ba5be345c58dbda90b3f4b0fd40c5bfd4cc2ccb0f0813427935995705c828110d46c7093749ef459455c285dc500de7d7fd01456460778a7d0b6b494c26ed784965f21e63e693e1b73553d19d7833db740452a1b60f5efd610c55d22905137867ae86f74d3e7658b15f7420316307b2f18d2b9dbe5cf2214c14413c79203bdeca70e3d27341f7e2f8037a352d441c389a1777750b2aef0ef8f8a22447475619a59abea76af6c9e194d3b28f4ff81e3457018eb79b0cf7b2c846e8c0fe79f054f",
+            //         code: "def50200cc96ad157287a2a77f49e77e28f06877e09792dc9dd58a7bb75a48a21890880b85747f4e375e16d3ff2232efea9323a00869c2dc855020988bb713b8a145ae5ae6e8de7fc29360fad24b6dda50ae0bbd789740215da1adee611c234ac27c5c4d6464b163539a0e94b5bc3de1d2c12ff4fc92917a51f8a59a523bfcbaa5be282ed6031c1ca732e00d06e9f28c6c06eb706a155e3228d65e59755a9a9e52296b6fa1e4976f235285e869e1c67272c6a14eb89661f375d6031daeb790442706bcee9fc3930c1dffb6db27ba72e1f41f5079de731a7f6e1169d28c197e5c850d9a34dec3f78cd92aaeef7385f5ef31436ba2feb79d930544bbe479ce624846af1ada2fa6a3bd494a6980b5597a76c1558058e247d45a4a609789401a0fe4076d0778677e0574e1d4da35e7ab4e6711cfe6f2d9576c414ad8a828ac46cff0d6d83cee87d0bd72cba46ca287ccbf38762e128f203a69ab51c7f88483695a9172f4a27c2b5d99857bc3c972eda922d6e58916408677adf775eedfc2208d63a7caad52e6d96e86f9450504dc0629e40517fc9fa6e2478eaa7da34c47dde9aa2003977323770ac61c98984201192f23f64c55a3f17c6564dac6a0f09c990103d864412f02270e352343343a38fb15ff9713e91ce465a0f9eb9f13471f54b26c5e801d568135f989d6a78d39c103c470f73eadbfa576b0d6851c",
             //         redirect_uri: "https://randmpop.github.io/Test-deals/"
             //     })
             // })
@@ -24,15 +25,9 @@
             // .then(data => console.log('Успешно:', data))
             // .catch(error => console.error('Ошибка:', error));
 
-
-            // fetch('https://cors-anywhere.herokuapp.com/https://olgachfrontend.amocrm.ru/api/v4/account')
-            // .then(response => response.json())
-            // .then(data => console.log(data))
-            // .catch(error => console.error('Ошибка:', error));
-
             //Запрос на сделки
             const apiUrl = 'https://cors-anywhere.herokuapp.com/https://olgachfrontend.amocrm.ru/api/v4/leads';
-            const accessToken = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjgzYzIwOWFjNjk1Y2RhYzNmN2NlNDczM2Y2OTJlYzA5MzE4NzdiM2MxZWRhZjk4MmYwNDlhNTk1ZWU3NzNjYzlmMzljMmYyM2U0OTIwNTc1In0.eyJhdWQiOiIzNjU4MDQ1My0xYzE0LTQ0NTktODk4ZS0wYzdjMzM5MDM5ZWIiLCJqdGkiOiI4M2MyMDlhYzY5NWNkYWMzZjdjZTQ3MzNmNjkyZWMwOTMxODc3YjNjMWVkYWY5ODJmMDQ5YTU5NWVlNzczY2M5ZjM5YzJmMjNlNDkyMDU3NSIsImlhdCI6MTc0MjI5ODg5OSwibmJmIjoxNzQyMjk4ODk5LCJleHAiOjE3NDIzODUyOTksInN1YiI6IjEyMjQ2OTM0IiwiZ3JhbnRfdHlwZSI6IiIsImFjY291bnRfaWQiOjMyMjkyNjIyLCJiYXNlX2RvbWFpbiI6ImFtb2NybS5ydSIsInZlcnNpb24iOjIsInNjb3BlcyI6WyJwdXNoX25vdGlmaWNhdGlvbnMiLCJmaWxlcyIsImNybSIsImZpbGVzX2RlbGV0ZSIsIm5vdGlmaWNhdGlvbnMiXSwiaGFzaF91dWlkIjoiMTIzYmQ1ODgtZDkzOC00MGQxLThlNjEtOTNiOGY1NzlkZmRlIiwiYXBpX2RvbWFpbiI6ImFwaS1iLmFtb2NybS5ydSJ9.EQZHjmui5JnWivwBzPIWsVa6yO-dWgifk5jdh-UTXTfTPvHqC3NabKng_gBkKNgSoybQeXsxwRVVyzfwFHZ7HoT53aEAzQRcsm2nZWuHcQGsnejRdieeWgbn3AroBxWJSFFIdrvKQzJSr_y772mygTmfdDFJm853R8ilY2_O5cJwgabqbMBI8c7F5ScuNxwEyPLE02hULO0NzecPStMeLUpBMirgdH8MhhGApywPpuzZZQR2CKHmUzrviRY8m5v8jWFFbCaa9gfkJqPT5FT5Y99C-KZidjjksvvm6b6RXhOvVEgMnkeh_H2FZZCgd7a9QXmRQ1s4iEkZKjliu8Ynuw';
+            const accessToken = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjhhYTA4ZDRjZmRjZmIyODJhMjFkYmU1ZDE2ZjM1ZmMxYzMzMmRlNDdmZjRlYzlkMDJlNzdhZGQ1YjQ3ZWI0ODAxMTAyNjFlMWNmMmY1NTE0In0.eyJhdWQiOiIzNjU4MDQ1My0xYzE0LTQ0NTktODk4ZS0wYzdjMzM5MDM5ZWIiLCJqdGkiOiI4YWEwOGQ0Y2ZkY2ZiMjgyYTIxZGJlNWQxNmYzNWZjMWMzMzJkZTQ3ZmY0ZWM5ZDAyZTc3YWRkNWI0N2ViNDgwMTEwMjYxZTFjZjJmNTUxNCIsImlhdCI6MTc0MjM5Njk3NCwibmJmIjoxNzQyMzk2OTc0LCJleHAiOjE3NDI0ODMzNzQsInN1YiI6IjEyMjQ2OTM0IiwiZ3JhbnRfdHlwZSI6IiIsImFjY291bnRfaWQiOjMyMjkyNjIyLCJiYXNlX2RvbWFpbiI6ImFtb2NybS5ydSIsInZlcnNpb24iOjIsInNjb3BlcyI6WyJwdXNoX25vdGlmaWNhdGlvbnMiLCJmaWxlcyIsImNybSIsImZpbGVzX2RlbGV0ZSIsIm5vdGlmaWNhdGlvbnMiXSwiaGFzaF91dWlkIjoiZjA2MzllNDQtOTRjZC00N2FhLTg4MjAtMGVhMWJkMGEyNGIwIiwiYXBpX2RvbWFpbiI6ImFwaS1iLmFtb2NybS5ydSJ9.mibP2rXjPq5RpdT7WhbHUVktMOPccxacC_J7ITwcDXuaxIBZWnDQNk1z612jGt1ycFvk_aoIv35hU0S40woRPk2HvI13TN4WwGYLGNJLerSZg_OzU4O20ksCv1ctPlzDtFUSRk25fFPQ3JWBjp89o5aNdkFU1FZfforZETkASD4g67Se4-rWHOn8apllJHT84gr0XsBuOe7atzG57F00gKNE7vF2Sbaa1p4ttlHkzL6Rc8NrCpxo7NZq6IqexOyVCnNEBo-taKT7HABjG1LSWIrf-poI-dGLQ_1Nmgt-OHkUyDz6YdBoGyDaGS-Fq5pqIJwyJ59D0glc2cm7WG5pgw';
             fetch(apiUrl, {
                 method: 'GET',
                 headers: {
@@ -48,96 +43,171 @@
                 })
                 .then(data => {
                     console.log('Ответ от API:', data);
-                    const leadNameAll = document.querySelectorAll(".lead-name");
-                    const leadBudgetAll = document.querySelectorAll(".lead-budget");
-                    const leadIDAll = document.querySelectorAll(".lead-id");
+                    const leadNameAll = document.querySelectorAll(".lead-data-name");
+                    const leadBudgetAll = document.querySelectorAll(".lead-data-budget");
+                    const leadIDAll = document.querySelectorAll(".lead-data-id");
                     for (let i = 0; i < 10; i++){
-                        leadNameAll[i].textContent = data._embedded.leads[i].name;
-                        leadBudgetAll[i].textContent = data._embedded.leads[i].price;
-                        leadIDAll[i].textContent = data._embedded.leads[i].id;
+                        leadNameAll[i].textContent += data._embedded.leads[i].name;
+                        leadBudgetAll[i].textContent += data._embedded.leads[i].price;
+                        leadIDAll[i].textContent += data._embedded.leads[i].id;
                     }
                 })
                 .catch(error => {
                     console.error('Ошибка:', error);
-                });
-
-        // Пример, чтоб не сразу выводились результаты
-        //     function fetchData() {
-        //     const apiUrl = 'https://cors-anywhere.herokuapp.com/https://olgachfrontend.amocrm.ru/api/v4/leads';
-        //     const accessToken = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjgzYzIwOWFjNjk1Y2RhYzNmN2NlNDczM2Y2OTJlYzA5MzE4NzdiM2MxZWRhZjk4MmYwNDlhNTk1ZWU3NzNjYzlmMzljMmYyM2U0OTIwNTc1In0.eyJhdWQiOiIzNjU4MDQ1My0xYzE0LTQ0NTktODk4ZS0wYzdjMzM5MDM5ZWIiLCJqdGkiOiI4M2MyMDlhYzY5NWNkYWMzZjdjZTQ3MzNmNjkyZWMwOTMxODc3YjNjMWVkYWY5ODJmMDQ5YTU5NWVlNzczY2M5ZjM5YzJmMjNlNDkyMDU3NSIsImlhdCI6MTc0MjI5ODg5OSwibmJmIjoxNzQyMjk4ODk5LCJleHAiOjE3NDIzODUyOTksInN1YiI6IjEyMjQ2OTM0IiwiZ3JhbnRfdHlwZSI6IiIsImFjY291bnRfaWQiOjMyMjkyNjIyLCJiYXNlX2RvbWFpbiI6ImFtb2NybS5ydSIsInZlcnNpb24iOjIsInNjb3BlcyI6WyJwdXNoX25vdGlmaWNhdGlvbnMiLCJmaWxlcyIsImNybSIsImZpbGVzX2RlbGV0ZSIsIm5vdGlmaWNhdGlvbnMiXSwiaGFzaF91dWlkIjoiMTIzYmQ1ODgtZDkzOC00MGQxLThlNjEtOTNiOGY1NzlkZmRlIiwiYXBpX2RvbWFpbiI6ImFwaS1iLmFtb2NybS5ydSJ9.EQZHjmui5JnWivwBzPIWsVa6yO-dWgifk5jdh-UTXTfTPvHqC3NabKng_gBkKNgSoybQeXsxwRVVyzfwFHZ7HoT53aEAzQRcsm2nZWuHcQGsnejRdieeWgbn3AroBxWJSFFIdrvKQzJSr_y772mygTmfdDFJm853R8ilY2_O5cJwgabqbMBI8c7F5ScuNxwEyPLE02hULO0NzecPStMeLUpBMirgdH8MhhGApywPpuzZZQR2CKHmUzrviRY8m5v8jWFFbCaa9gfkJqPT5FT5Y99C-KZidjjksvvm6b6RXhOvVEgMnkeh_H2FZZCgd7a9QXmRQ1s4iEkZKjliu8Ynuw';
-
-        //     return fetch(apiUrl, {
-        //         method: 'GET',
-        //         headers: {
-        //             'Authorization': `Bearer ${accessToken}`,
-        //             'Content-Type': 'application/json',
-        //         }
-        //     })
-        //         .then(response => {
-        //             if (!response.ok) {
-        //                 throw new Error('Ошибка запроса: ' + response.statusText);
-        //             }
-        //             return response.json();
-        //         })
-        // }
-
-        // fetchData()
-        //     .then(apiResponse => {
-        //         console.log('Ответ от API:', apiResponse);
-        //     })
-        //     .catch(error => {
-        //         console.error('Ошибка:', error);
-        //     });                
+                });               
         </script>
-        <div class="leads lead1">
-            <p class="lead-name"></p>
-            <p class="lead-budget"></p>
-            <p class="lead-id"></p>
+        <div class="container">
+            <div class="lead lead1">
+                <div class="lead-data lead1-data">
+                    <p class="lead-data-name">Название: </p>
+                    <p class="lead-data-budget">Бюджет: </p>
+                    <p class="lead-data-id">ID: </p>
+                </div>
+                <div class="lead-details is-hidden lead1-details">
+                    <p class="lead-details-name">Название: </p>
+                    <p class="lead-details-id">ID: </p>
+                    <p class="lead-details-date">Дата: </p>
+                    <svg class="lead-details-status" height="50" width="50" xmlns="http://www.w3.org/2000/svg">
+                        <circle r="23" cx="25" cy="25" fill="blue" />
+                      </svg>
+                </div>   
+            </div>
+            <div class="lead lead2">
+                <div class="lead-data lead2-data">
+                    <p class="lead-data-name">Название: </p>
+                    <p class="lead-data-budget">Бюджет: </p>
+                    <p class="lead-data-id">ID: </p>
+                </div>
+                <div class="lead-details is-hidden lead2-details">
+                    <p class="lead-details-name">Название: </p>
+                    <p class="lead-details-id">ID: </p>
+                    <p class="lead-details-date">Дата: </p>
+                    <svg class="lead-details-status" height="50" width="50" xmlns="http://www.w3.org/2000/svg">
+                        <circle r="23" cx="25" cy="25" fill="blue" />
+                      </svg>
+                </div>   
+            </div>
+            <div class="lead lead3">
+                <div class="lead-data lead3-data">
+                    <p class="lead-data-name">Название: </p>
+                    <p class="lead-data-budget">Бюджет: </p>
+                    <p class="lead-data-id">ID: </p>
+                </div>
+                <div class="lead-details is-hidden lead3-details">
+                    <p class="lead-details-name">Название: </p>
+                    <p class="lead-details-id">ID: </p>
+                    <p class="lead-details-date">Дата: </p>
+                    <svg class="lead-details-status" height="50" width="50" xmlns="http://www.w3.org/2000/svg">
+                        <circle r="23" cx="25" cy="25" fill="blue" />
+                      </svg>
+                </div>   
+            </div>
+            <div class="lead lead4">
+                <div class="lead-data lead4-data">
+                    <p class="lead-data-name">Название: </p>
+                    <p class="lead-data-budget">Бюджет: </p>
+                    <p class="lead-data-id">ID: </p>
+                </div>
+                <div class="lead-details is-hidden lead4-details">
+                    <p class="lead-details-name">Название: </p>
+                    <p class="lead-details-id">ID: </p>
+                    <p class="lead-details-date">Дата: </p>
+                    <svg class="lead-details-status" height="50" width="50" xmlns="http://www.w3.org/2000/svg">
+                        <circle r="23" cx="25" cy="25" fill="blue" />
+                      </svg>
+                </div>   
+            </div>
+            <div class="lead lead5">
+                <div class="lead-data lead5-data">
+                    <p class="lead-data-name">Название: </p>
+                    <p class="lead-data-budget">Бюджет: </p>
+                    <p class="lead-data-id">ID: </p>
+                </div>
+                <div class="lead-details is-hidden lead5-details">
+                    <p class="lead-details-name">Название: </p>
+                    <p class="lead-details-id">ID: </p>
+                    <p class="lead-details-date">Дата: </p>
+                    <svg class="lead-details-status" height="50" width="50" xmlns="http://www.w3.org/2000/svg">
+                        <circle r="23" cx="25" cy="25" fill="blue" />
+                      </svg>
+                </div>   
+            </div>
+            <div class="lead lead6">
+                <div class="lead-data lead6-data">
+                    <p class="lead-data-name">Название: </p>
+                    <p class="lead-data-budget">Бюджет: </p>
+                    <p class="lead-data-id">ID: </p>
+                </div>
+                <div class="lead-details is-hidden lead6-details">
+                    <p class="lead-details-name">Название: </p>
+                    <p class="lead-details-id">ID: </p>
+                    <p class="lead-details-date">Дата: </p>
+                    <svg class="lead-details-status" height="50" width="50" xmlns="http://www.w3.org/2000/svg">
+                        <circle r="23" cx="25" cy="25" fill="blue" />
+                      </svg>
+                </div>   
+            </div>
+            <div class="lead lead7">
+                <div class="lead-data lead7-data">
+                    <p class="lead-data-name">Название: </p>
+                    <p class="lead-data-budget">Бюджет: </p>
+                    <p class="lead-data-id">ID: </p>
+                </div>
+                <div class="lead-details is-hidden lead7-details">
+                    <p class="lead-details-name">Название: </p>
+                    <p class="lead-details-id">ID: </p>
+                    <p class="lead-details-date">Дата: </p>
+                    <svg class="lead-details-status" height="50" width="50" xmlns="http://www.w3.org/2000/svg">
+                        <circle r="23" cx="25" cy="25" fill="blue" />
+                      </svg>
+                </div>   
+            </div>
+            <div class="lead lead8">
+                <div class="lead-data lead8-data">
+                    <p class="lead-data-name">Название: </p>
+                    <p class="lead-data-budget">Бюджет: </p>
+                    <p class="lead-data-id">ID: </p>
+                </div>
+                <div class="lead-details is-hidden lead8-details">
+                    <p class="lead-details-name">Название: </p>
+                    <p class="lead-details-id">ID: </p>
+                    <p class="lead-details-date">Дата: </p>
+                    <svg class="lead-details-status" height="50" width="50" xmlns="http://www.w3.org/2000/svg">
+                        <circle r="23" cx="25" cy="25" fill="blue" />
+                      </svg>
+                </div>   
+            </div>
+            <div class="lead lead9">
+                <div class="lead-data lead9-data">
+                    <p class="lead-data-name">Название: </p>
+                    <p class="lead-data-budget">Бюджет: </p>
+                    <p class="lead-data-id">ID: </p>
+                </div>
+                <div class="lead-details is-hidden lead9-details">
+                    <p class="lead-details-name">Название: </p>
+                    <p class="lead-details-id">ID: </p>
+                    <p class="lead-details-date">Дата: </p>
+                    <svg class="lead-details-status" height="50" width="50" xmlns="http://www.w3.org/2000/svg">
+                        <circle r="23" cx="25" cy="25" fill="blue" />
+                      </svg>
+                </div>   
+            </div>
+            <div class="lead lead10">
+                <div class="lead-data lead10-data">
+                    <p class="lead-data-name">Название: </p>
+                    <p class="lead-data-budget">Бюджет: </p>
+                    <p class="lead-data-id">ID: </p>
+                </div>
+                <div class="lead-details is-hidden lead10-details">
+                    <p class="lead-details-name">Название: </p>
+                    <p class="lead-details-id">ID: </p>
+                    <p class="lead-details-date">Дата: </p>
+                    <svg class="lead-details-status" height="50" width="50" xmlns="http://www.w3.org/2000/svg">
+                        <circle r="23" cx="25" cy="25" fill="blue" />
+                      </svg>
+                </div>   
+            </div>
         </div>
-        <div class="leads lead2">
-            <p class="lead-name"></p>
-            <p class="lead-budget"></p>
-            <p class="lead-id"></p>
-        </div>
-        <div class="leads lead3">
-            <p class="lead-name"></p>
-            <p class="lead-budget"></p>
-            <p class="lead-id"></p>
-        </div>
-        <div class="leads lead4">
-            <p class="lead-name"></p>
-            <p class="lead-budget"></p>
-            <p class="lead-id"></p>
-        </div>
-        <div class="leads lead5">
-            <p class="lead-name"></p>
-            <p class="lead-budget"></p>
-            <p class="lead-id"></p>
-        </div>
-        <div class="leads lead6">
-            <p class="lead-name"></p>
-            <p class="lead-budget"></p>
-            <p class="lead-id"></p>
-        </div>
-        <div class="leads lead7">
-            <p class="lead-name"></p>
-            <p class="lead-budget"></p>
-            <p class="lead-id"></p>
-        </div>
-        <div class="leads lead8">
-            <p class="lead-name"></p>
-            <p class="lead-budget"></p>
-            <p class="lead-id"></p>
-        </div>
-        <div class="leads lead9">
-            <p class="lead-name"></p>
-            <p class="lead-budget"></p>
-            <p class="lead-id"></p>
-        </div>
-        <div class="leads lead10">
-            <p class="lead-name"></p>
-            <p class="lead-budget"></p>
-            <p class="lead-id"></p>
-        </div>
+        <script src="scripts/leadInfoLoading.js"></script>
     </body>
 </html>

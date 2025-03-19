@@ -1,0 +1,18 @@
+.container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    gap:1%;
+}
+.lead{
+    position: relative;
+}
+.lead-data{
+    background-color: rgb(119, 187, 255);
+}
+.lead-details{
+    background-color: rgb(193, 127, 193);
+}
+.lead-details.is-hidden{
+    display: none;
+}
