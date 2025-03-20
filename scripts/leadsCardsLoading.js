@@ -4,7 +4,7 @@ const leadDetailsAll = document.querySelectorAll(".lead-details");
 // import {leadsIDArray} from './getLeads.js';
 const apiUrlArray = new Array(10);
 leadsUrlID = localStorage.getItem('leadsIDArray',leadsIDArray).split(',');
-console.log(leadsUrlID);
+// console.log(leadDataAll);
 for (let i = 0; i < 10; i++){
     apiUrlArray[i] = 'https://olgachfrontend.amocrm.ru/api/v4/leads/'+leadsUrlID[i];
 }
